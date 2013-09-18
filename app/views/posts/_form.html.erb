@@ -1,0 +1,7 @@
+<%= form_for @post do |f| %>
+  Title:<br/>
+  <%= f.text_field :title %>
+  <%= f.text_area :body %>
+
+  <%= f.submit (@post.persisted? ? 'Update post' : 'Create post') %>
+<% end %>
