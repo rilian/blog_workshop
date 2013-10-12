@@ -25,6 +25,4 @@ And /^I should see my new post$/ do
   page.should have_content('hello world')
 
   Post.all.count.should == 1
-
-  sleep 10000
 end
