@@ -4,7 +4,8 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to post_path(@comment.post)
     else
-      render controller: 'posts', action: 'show', id: @comment.post_id
+      @post = @comment.post
+      render 'posts/show', id: @post.id
     end
   end
 
