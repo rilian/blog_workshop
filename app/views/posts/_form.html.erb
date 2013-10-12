@@ -1,7 +1,13 @@
 <%= form_for @post do |f| %>
-  Title:<br/>
+  <% if @post.errors.any? %>
+    Errors: <%= @post.errors.full_messages.join('; ') %>
+  <% end %>
+
+  <br/>Title:
   <%= f.text_field :title %>
+  <br/>Body:
   <%= f.text_area :body %>
 
+  <br/>
   <%= f.submit (@post.persisted? ? 'Update post' : 'Create post') %>
 <% end %>
