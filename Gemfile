@@ -9,6 +9,12 @@ gem 'turbolinks'
 gem 'debugger'
 gem 'devise'
 
+#deploy
+gem 'capistrano'
+gem 'rvm-capistrano'
+gem 'unicorn'
+gem 'capistrano-unicorn'
+
 group :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
