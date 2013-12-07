@@ -9,6 +9,7 @@ end
 When /^I fill post form$/ do
   fill_in 'post_title', with: 'First post'
   fill_in 'post_body', with: 'hello world'
+  click_button 'Create post'
 end
 
 And /^I submit posts form$/ do
